@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RapidRetail.Domain.Entities
 {
-    internal class Product : BaseEntity
+    public class Product : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
