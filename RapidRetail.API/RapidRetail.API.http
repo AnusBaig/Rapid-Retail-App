@@ -1,0 +1,6 @@
+@RapidRetail.API_HostAddress = http://localhost:5156
+
+GET {{RapidRetail.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
