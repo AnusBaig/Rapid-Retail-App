@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RapidRetail.Domain.Entities
 {
-    internal class CartItem
+    public class CartItem : BaseEntity
     {
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public int Quantity { get; set; }
         public Product Product { get; set; }
     }

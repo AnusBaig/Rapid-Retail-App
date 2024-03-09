@@ -1,5 +1,6 @@
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RapidRetail.Application;
 using RapidRetail.Infrastructure;
 using RapidRetail.Infrastructure.Services;
 

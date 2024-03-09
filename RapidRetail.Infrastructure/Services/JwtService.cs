@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using RapidRetail.Domain.Entities;
@@ -48,6 +49,18 @@ namespace RapidRetail.Infrastructure.Services
                 ValidAudience = jwtSetting.Issuer,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SecretKey))
             };
+        }
+
+        public static int? GetUserId(IHttpContextAccessor context)
+        {
+            try
+            {
+                return int.Parse(context.HttpContext?.User.FindFirstValue("userId"));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

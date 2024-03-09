@@ -5,6 +5,6 @@ namespace RapidRetail.Domain.Services
 {
     public interface IProductService
     {
-        List<Product> FetchAllProducts();
+        List<ProductResponseModel> FetchAllProducts();
     }
 }
